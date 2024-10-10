@@ -16,6 +16,7 @@ import * as XLSX from "xlsx";
 import { Loader2, X } from "lucide-react";
 import Loading from "./loading";
 import { GithubIconComponent } from "@/components/github_icon";
+import { ThemeToggle } from "@/components/theme_switcher";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -122,7 +123,7 @@ export default function Home() {
           <div className="grid gap-4">
             <div className="grid gap-2 cursor-pointer">
               <Label htmlFor="file-upload">Selecionar arquivo</Label>
-              <Input id="file-upload" type="file" accept=".txt" onChange={handleFileChange} />
+              <Input id="file-upload" type="file" accept=".txt" onChange={handleFileChange} placeholder="a" />
             </div>
             <Suspense fallback={<Loading />}>
               <Button onClick={processFile} className="w-full" disabled={loading}>
@@ -193,6 +194,9 @@ export default function Home() {
         <a target="_blank" href="https://github.com/ArtRiv">
           <GithubIconComponent />
         </a>
+      </div>
+      <div className="absolute top-2 right-2">
+        <ThemeToggle/>
       </div>
     </div>
   );
