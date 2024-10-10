@@ -18,8 +18,6 @@ import * as XLSX from "xlsx";
 import { Loader2 } from "lucide-react";
 import Loading from "./loading";
 
-export const description =
-  "A file upload page to extract codes from a text file and convert them to an Excel file.";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
