@@ -10,8 +10,6 @@ import {
   TableCaption,
   TableCell,
   TableFooter,
-  TableHead,
-  TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import * as XLSX from "xlsx";
